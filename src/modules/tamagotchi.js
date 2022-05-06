@@ -29,14 +29,7 @@ export class Tamagotchi {
       if (this.#hungerLevel < 10) {
         this.#hungerLevel += 1;
         document.querySelector("#pHunger").innerText = this.#hungerLevel;
-        if(this.#hungerLevel === 8){
-          const img = document.getElementById('bild');
-        document.body.append(img);
-        const imgUrl2 = new URL('../img/cow.png', import.meta.url);
-        img.src = imgUrl2.href;
-        img.width = 300;
-        img.style.marginLeft = '700px';
-        }
+        
       }
       else if (this.#hungerLevel == 10) {
         clearInterval(update);
@@ -52,14 +45,7 @@ export class Tamagotchi {
       if (this.#happinessLevel > 0) {
         this.#happinessLevel -= 1;
         document.querySelector("#pHappy").innerText = this.#happinessLevel
-        if(this.#happinessLevel === 2){
-          const img = document.getElementById('bild');
-        document.body.append(img);
-        const imgUrl2 = new URL('../img/cow.png', import.meta.url);
-        img.src = imgUrl2.href;
-        img.width = 300;
-        img.style.marginLeft = '700px';
-        }
+        
       }
       else if (this.#happinessLevel == 0) {
         clearInterval(update2);
